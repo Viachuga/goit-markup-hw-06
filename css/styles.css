@@ -4,11 +4,10 @@
   --akcent-color: #2196f3;
   --white-color: #ffffff;
   --border-color: #ececec;
-
+  --hover-btn: #188ce8;
   --bg-nav: #ffffff;
   --bg-img: #eeeeee;
   --bg-hero: #2f303a;
-
   --button-color: #f5f4fa;
   --icon-color: #afb1b8;
 }
@@ -42,6 +41,13 @@ p {
 a {
   text-decoration: none;
   color: var(--icon-color);
+}
+
+a.accept {
+  text-decoration-line: underline;
+  text-underline-position: under;
+  color: var(--akcent-color);
+  line-height: 1.71;
 }
 
 img {
@@ -175,7 +181,7 @@ img {
 
 .nav-text:hover .icon-contacts,
 .nav-text:focus .icon-contacts {
-  fill: #188ce8;
+  fill: var(--hover-btn);
 }
 
 .nav-contact {
@@ -258,7 +264,7 @@ img {
 
 .button-baner:hover,
 .button-baner:focus {
-  background-color: #188ce8;
+  background-color: var(--hover-btn);
 }
 
 .button {
@@ -612,6 +618,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
 }
 
 .close-icon {
@@ -634,6 +641,189 @@ img {
 .close-icon:hover,
 .close-icon:focus {
   fill: var(--akcent-color);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: var(--h-color);
+  margin-bottom: 12px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label {
+  display: flex;
+  padding-bottom: 4px;
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--akcent-color);
+}
+
+.text-place {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-place:hover,
+.text-place:focus {
+  border-color: var(--akcent-color);
+}
+
+.modal-div {
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  padding-left: 42px;
+}
+
+.text-place {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.button-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.form-text-box::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.modal-input:hover + .form-icon {
+  fill: var(--akcent-color);
+}
+
+.modal-input:focus + .form-icon {
+  fill: var(--akcent-color);
+}
+
+.check-input:checked + .form-text-box::before {
+  background-image: url(../images/svg-icons/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: var(--akcent-color);
+}
+
+.check-input:checked {
+  background-image: url(../images/svg-icons/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox {
+  margin-top: 20px;
+}
+
+.btn-form,
+.btn-spam {
+  min-width: 200px;
+  height: 50px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--akcent-color);
+  color: var(--white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-spam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe {
+  margin-left: 10px;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+  background-color: var(--hover-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-spam:hover,
+.btn-spam:focus {
+  background-color: var(--hover-btn);
+}
+
+.spam-mail {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+}
+
+.spam-mail:hover,
+.spam-mail:focus {
+  border-color: var(--akcent-color);
+}
+
+.spam-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.spam {
+  margin-left: 93px;
 }
 
 /* ----------------------------КІНЕЦЬ ФУТЕРА---------------------------- */
